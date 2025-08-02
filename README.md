@@ -1,41 +1,98 @@
-## 1. Introduction 
--> Scrappy is a very simple web scraper that fetches news head lines along with their visit links from Hacker news and mails them to a specified email.
+# 🕸️ Scrappy V2
 
-## 2. What are the files?
--> **bot.py** - The actual bot, \n
-   **cred.py** - Hold the credentials the bot.py uses.
-	- FEA: Sending gmail address
-	- FEA_PASS: Sending gmail address' app password, **not** the regular login one
-	- TEA: The recieving email address
-	- SS: Google's SMTP server
-	- SP: Which port to connect to on the server
-   **requirements.txt** - Holds the bot's dependencies that pip will install 
+Scrappy is a very simple web scraper that fetches news headlines along with their visit links from [Hacker News](https://news.ycombinator.com/) and mails them to a specified email address.
 
-##3. How to use?
--> Step 1: Ensure you have firefox, python, and pip installed. Also, have a gmail account with app password ready. It will be 12 digit Alphabetic password given to you so that you can log into the FEA account. You CANNOT use your daily password here. 
+---
 
-   Step 2: Download Scrappy-V2, and run the following commands. [Note: Use powershell on windows]
-		i. Go into Scrappy-V2 directory
-		$ cd Scrappy-V2
-		
-		ii. Create and activate the python virtual environment in the directory
-		-If in Windows:
-			$ python -m venv venv
-			$ venv\Scripts\Activate.ps1
-		-If in Linux:
-			$ python -m venv .venv
-			$ source .venv/bin/activate
+## 📁 Files
 
-		iii. Get the required dependencies with pip
-		$ pip install -r requirements.txt
+- `bot.py`: The actual bot that does scraping and emailing.
+- `cred.py`: Holds sensitive credentials used by `bot.py`.
+  - `FEA`: Sending Gmail address.
+  - `FEA_PASS`: App password for the Gmail account.
+  - `TEA`: Target email address where the headlines will be sent.
+  - `SS`: SMTP server (default: smtp.gmail.com).
+  - `SP`: SMTP port (default: 587).
+- `requirements.txt`: Lists Python dependencies to be installed via `pip`.
 
-   Step 3: Edit the cred.py file. Input your sending gmail address in FEA, its 12 digit Alphabetic password into FEA_PASS, and the receiving email address in TEA. 
+---
 
-   Step 4:  Run the bot.py
+## ⚙️ How to Use
 
+### Step 1: Prerequisites
 
+Ensure you have the following installed:
 
-		
-		
-	
-		
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/) (required for Selenium)
+- [Python](https://www.python.org/) and `pip`
+- A Gmail account with an **App Password**
+
+> 🔐 **Note:** App passwords are 12-character alphabet-only keys generated in your Google Account settings.  
+> You **cannot** use your regular Gmail password here.
+
+---
+
+### Step 2: Set Up the Environment
+
+#### 2.1 Navigate into the project folder
+
+```bash
+cd Scrappy-V2
+```
+
+#### 2.2 Create and activate a Python virtual environment
+
+- On **Windows (PowerShell)**:
+
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+- On **Linux**:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+#### 2.3 Install required dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### Step 3: Add Your Credentials
+
+Edit the `cred.py` file and fill in the following:
+
+```python
+FEA = "your-sending-gmail@gmail.com"
+FEA_PASS = "your-12-letter-app-password"
+TEA = "your-receiving-email@example.com"
+SS = "smtp.gmail.com"
+SP = 587
+```
+
+---
+
+### Step 4: Run the Bot
+
+After activating your virtual environment, run:
+
+```bash
+python bot.py
+```
+
+You should receive an email with the latest top headlines from Hacker News.
+
+---
+
+## 🔒 Security Note
+
+- **DO NOT share your actual `cred.py`** file with credentials.
+- If publishing this project publicly, consider renaming `cred.py` to `cred_template.py`, and adding `cred.py` to `.gitignore`.
+
+---

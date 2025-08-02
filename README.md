@@ -1,4 +1,4 @@
-# 🕸️ Scrappy 
+# 🤖 Scrappy 
 
 Scrappy is a very simple web scraper that fetches news headlines along with their visit links from [Hacker News](https://news.ycombinator.com/) and mails them to a specified email address.
 
@@ -42,7 +42,7 @@ git clone https://github.com/B-ROT/Scrappy.git
 #### 2.1 Navigate into the project folder
 
 ```bash
-cd Scrappy-V2
+cd Scrappy
 ```
 
 #### 2.2 Create and activate a Python virtual environment
@@ -98,6 +98,5 @@ You should receive an email with the latest top headlines from Hacker News.
 ## 🔒 Security Note
 
 - **DO NOT share your actual `cred.py`** file with credentials.
-- If publishing this project publicly, consider renaming `cred.py` to `cred_template.py`, and adding `cred.py` to `.gitignore`.
 
 ---

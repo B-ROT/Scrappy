@@ -2,7 +2,7 @@
 -> Scrappy is a very simple web scraper that fetches news head lines along with their visit links from Hacker news and mails them to a specified email.
 
 ## 2. What are the files?
--> **bot.py** - The actual bot, 
+-> **bot.py** - The actual bot, \n
    **cred.py** - Hold the credentials the bot.py uses.
 	- FEA: Sending gmail address
 	- FEA_PASS: Sending gmail address' app password, **not** the regular login one

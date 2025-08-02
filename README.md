@@ -18,7 +18,6 @@ Scrappy is a very simple web scraper that fetches news headlines along with thei
 ---
 
 ## ⚙️ How to Use
-
 ### Step 1: Prerequisites
 
 Ensure you have the following installed:
@@ -26,6 +25,12 @@ Ensure you have the following installed:
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/) (required for Selenium)
 - [Python](https://www.python.org/) and `pip`
 - A Gmail account with an **App Password**
+
+And, clone the repository:
+
+```bash
+git clone https://github.com/B-ROT/Scrappy.git
+```
 
 > 🔐 **Note:** App passwords are 12-character alphabet-only keys generated in your Google Account settings.  
 > You **cannot** use your regular Gmail password here.

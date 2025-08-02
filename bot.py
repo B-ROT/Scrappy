@@ -10,7 +10,7 @@ import smtplib
 
 opt = webdriver.FirefoxOptions()
 
-head_status = input("\nExecute the bot...\n\n1. Headed\t2. Headless\nSelect[1/2]: ")
+head_status = input("\nExecute the bot...\n\n1. Headed\t2. Headless\n\nSelect [1/2]: ")
 if head_status == "1":
     opt.add_argument("--headed")
 else:

@@ -1,4 +1,4 @@
-# 🕸️ Scrappy V2
+# 🕸️ Scrappy 
 
 Scrappy is a very simple web scraper that fetches news headlines along with their visit links from [Hacker News](https://news.ycombinator.com/) and mails them to a specified email address.
 
